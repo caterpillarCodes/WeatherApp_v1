@@ -1,0 +1,136 @@
+* {
+  font-family: "Lisu Bosa", serif;
+  color: #323a49;
+}
+.card {
+  max-width: 680px;
+  margin: 4rem auto;
+}
+.card-body {
+  background-color: #ebeef1;
+}
+.row {
+  margin: 14px 10px 16px 10px;
+}
+
+/*======================
+     current situation
+========================*/
+.current-situation-box {
+  margin: 16px 0 0 6px;
+  background-color: #ebeef1;
+  border: 3px solid #ebeef1;
+  border-radius: 10px;
+  box-shadow: inset -5px -10px 10px -1px rgba(255, 255, 255, 0.7),
+    inset 5px 5px 10px -1px rgba(10, 99, 169, 0.16);
+  transition: all 300ms ease-in-out;
+  color: #323a49;
+}
+
+.current-situation-box:hover {
+  border: 3px solid #ebeef1;
+  box-shadow: -10px -10px 10px -1px rgba(255, 255, 255, 0.7),
+    10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+    inset -5px -5px 10px -1px rgba(255, 255, 255, 0.7),
+    inset 5px 5px 10px -1px rgba(10, 99, 169, 0.16);
+}
+.row-icon-city-date {
+  margin-bottom: 0;
+}
+.location-icon {
+  margin: 20px 0 0 10px;
+  font-size: 34px;
+  color: #1e3050;
+}
+div .city-date {
+  padding-top: 18px;
+}
+div .current-city {
+  margin-bottom: 0;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.current-date {
+  line-height: 10px;
+  font-weight: 900;
+  font-size: 12px;
+  color: #696a6c;
+}
+.current-tempature,
+span#temperature {
+  margin: 10px 0 0px 10px;
+  font-size: 60px;
+  font-family: "Ruwudu", serif;
+  color: #1e3050;
+}
+
+#unit-sub {
+  font-size: 25px;
+  transition: all 250ms ease-in-out;
+}
+#unit-sub:hover {
+  font-size: 20px;
+  cursor: pointer;
+}
+.current-situation-icon {
+  margin: 0 0 24px 10px;
+  font-size: 44px;
+  color: #1e3050;
+}
+div .current-situation-text {
+  margin: 0 0 24px 8px;
+  display: inline;
+  font-size: 16px;
+  color: #696a6c;
+}
+
+/*=======================
+      search section
+=======================*/
+input .input-group {
+  background-color: #ebeef1;
+}
+.btn:hover {
+  color: #1e3050;
+}
+/*=======================
+     next days situation
+==========================*/
+.next-day-forecast {
+  text-align: center;
+  border: 2px solid #ebeef1;
+  border-radius: 10px;
+  box-shadow: -10px -5px 10px -1px rgba(255, 255, 255, 0.7),
+    10px 5px 10px -1px rgba(10, 99, 169, 0.16);
+  margin: 14px 6px 14px 6px;
+  transition: all 250ms ease-in-out;
+}
+.next-day-forecast:hover {
+  border: 2px solid #ebeef1;
+  box-shadow: -10px -5px 10px -1px rgba(255, 255, 255, 0.7),
+    10px 5px 10px -1px rgba(10, 99, 169, 0.16),
+    inset -5px -5px 10px -1px rgba(255, 255, 255, 0.7),
+    inset 5px 5px 10px -1px rgba(10, 99, 169, 0.16);
+  font-size: larger;
+}
+div h5 {
+  margin: 18px auto 0 auto;
+  color: #1e3050;
+}
+
+.next-day-situation {
+  margin: 14px auto 0 auto;
+  font-size: 14px;
+  color: #696a6c;
+}
+div .next-days i.next-day-icon {
+  font-size: 24px;
+  margin: 17px auto 0 auto;
+  color: #37558a;
+}
+
+.next-day-temprature {
+  margin: 20px auto 50px auto;
+  font-size: 22px;
+  color: #1e3050;
+}
