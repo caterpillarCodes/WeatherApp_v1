@@ -4,7 +4,7 @@
 }
 .card {
   max-width: 680px;
-  margin: 4rem auto;
+  margin: 4rem auto 0 auto;
 }
 .card-body {
   background-color: #ebeef1;
@@ -133,4 +133,17 @@ div .next-days i.next-day-icon {
   margin: 20px auto 50px auto;
   font-size: 22px;
   color: #1e3050;
+}
+/*==================
+   add repo link
+   ==================*/
+p.author {
+  display: block;
+  margin: 0 auto;
+  max-width: 680px;
+  font-size: 12px;
+  color: #696a6c;
+}
+.repolink {
+  text-decoration: none;
 }
