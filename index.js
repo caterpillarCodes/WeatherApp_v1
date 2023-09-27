@@ -55,6 +55,9 @@ function displayWeatherCondition(response) {
     "src",
     ` https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 function search(city) {
   let apiKey = `3dce9b1c66837262a25b3f448d354a76`;
