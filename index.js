@@ -1,40 +1,41 @@
 //date and time
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let months = [
-  "JAN",
-  "FEB",
-  "MAR",
-  "APR",
-  "MAY",
-  "JUN",
-  "JUL",
-  "AUG",
-  "SEP",
-  "OCT",
-  "NOV",
-  "DEC",
-];
-let date = new Date();
-let htmldate = document.querySelector(".current-date");
-let hour = date.getHours();
-if (hour < 10) {
-  hour = `0${hour}`;
+function formatedDate(timestamp) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let months = [
+    "JAN",
+    "FEB",
+    "MAR",
+    "APR",
+    "MAY",
+    "JUN",
+    "JUL",
+    "AUG",
+    "SEP",
+    "OCT",
+    "NOV",
+    "DEC",
+  ];
+  let date = new Date(timestamp);
+  let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = date.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  return `${days[date.getDay()]} ${hour}:${minute} | ${
+    months[date.getMonth()]
+  } ${date.getDate()}`;
 }
-let minute = date.getMinutes();
-if (minute < 10) {
-  minute = `0${minute}`;
-}
-htmldate.innerHTML = `${days[date.getDay()]} ${hour}:${minute} | ${
-  months[date.getMonth()]
-} ${date.getDate()}`;
 
 //change city & show temprature
 
@@ -45,6 +46,9 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("p.current-situation-text").innerHTML =
     response.data.weather[0].description;
+  document.querySelector(".current-date").innerHTML = formatedDate(
+    response.data.dt * 1000
+  );
 }
 function search(city) {
   let apiKey = `3dce9b1c66837262a25b3f448d354a76`;
