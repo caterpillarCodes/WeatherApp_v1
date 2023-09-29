@@ -21,7 +21,7 @@
      current situation
 ========================*/
 .current-situation-box {
-  margin: 50px 0 0 20px;
+  margin: 50px 0 0 10px;
   background-color: #ffe8da;
   border: 3px solid #ffe8da;
   border-radius: 50% 10% 40% 10%;
@@ -90,11 +90,12 @@ div .current-situation-text {
   text-transform: capitalize;
 }
 div .hw {
+  font-size: 17px;
   max-width: 70%;
-  border-radius: 20% 50% 20px 50%;
-  box-shadow: -8px -5px 10px -1px rgb(253, 231, 217),
+  border-radius: 10% 50% 10% 50%;
+  box-shadow: -8px -5px 10px -1px rgb(250, 239, 230),
     10px 5px 10px -1px rgb(245, 217, 200);
-  margin: 50px 5px;
+  margin: 70px 5px;
   padding: 1em 1.5em;
   transition: all 250ms ease-in-out;
 }
@@ -105,20 +106,25 @@ div .hw:hover {
     inset -5px -5px 10px -1px rgba(255, 255, 255, 0.5),
     inset 5px 5px 10px -1px rgba(161, 90, 46, 0.16);
 }
-/*=======================
-      search section
-=======================*/
-input .input-group {
-  background-color: #ebeef1;
+
+.location-btn {
+  width: 100%;
+  background-color: #ffe8da;
+  border: none;
+  border-radius: 50% 5px 50% 5px;
+  box-shadow: -8px -5px 10px -1px rgb(253, 231, 217),
+    10px 5px 10px -1px rgb(245, 217, 200);
+  padding: 0.5em;
+  box-shadow: -8px -5px 10px -1px rgb(251, 239, 230),
+    10px 5px 10px -1px rgb(255, 224, 206),
+    -5px -5px 10px -1px rgba(255, 255, 255, 0.5),
+    5px 5px 10px -1px rgba(161, 90, 46, 0.16);
 }
-button {
-  border: 1px solid #ebeef1;
-  border-radius: 0 50% 0 50%;
-  box-shadow: -10px -5px 10px -1px rgba(255, 255, 255, 0.7),
-    10px 5px 10px -1px rgba(10, 99, 169, 0.16);
-}
-button:hover {
-  color: #1e3050;
+.location-btn:hover {
+  box-shadow: -10px -10px 10px -1px rgba(253, 231, 217, 0.7),
+    10px 10px 10px -1px rgba(245, 217, 200, 0.16),
+    inset -5px -5px 10px -1px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 10px -1px rgba(161, 90, 46, 0.16);
 }
 /*=======================
      next days situation

@@ -63,13 +63,13 @@ function displayWeatherCondition(response) {
     .setAttribute("alt", response.data.weather[0].description);
 }
 function search(city) {
-  let apiKey = `3dce9b1c66837262a25b3f448d354a76`;
-  let endPoint = `https://api.openweathermap.org/data/2.5/weather?`;
-  let units = "metric";
   let apiUrl = `${endPoint}q=${city}&limit=5&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-
+function searchLocation(latitude, longitude) {
+  let apiUrl = `${endPoint}lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
 function changeCity(event) {
   event.preventDefault();
   let input = document.querySelector("#input").value;
@@ -79,11 +79,25 @@ function changeCity(event) {
     alert("Enter a city name...");
   }
 }
+function handlePosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  searchLocation(latitude, longitude);
+}
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(handlePosition);
+}
 let celsiusTemprature = null;
+let apiKey = `3dce9b1c66837262a25b3f448d354a76`;
+let endPoint = `https://api.openweathermap.org/data/2.5/weather?`;
+let units = "metric";
 let form = document.querySelector("form");
-form.addEventListener("submit", changeCity);
 let searchButton = document.querySelector("#button-addon2");
+let currentLocationBtn = document.querySelector("#current-location-button");
+form.addEventListener("submit", changeCity);
 searchButton.addEventListener("click", changeCity);
+currentLocationBtn.addEventListener("click", getCurrentLocation);
 search("berlin");
 
 // °C to °F

@@ -53,28 +53,38 @@
             ></image>
             <p class="current-situation-text">Mostly cloudy</p>
           </div>
-          <div class="col-2" style="width: 10%"></div>
-          <div class="col">
+          <div class="col-2" style="width: 10%">
+            <button
+              class="location-btn"
+              type="button"
+              id="current-location-button"
+            >
+              <i class="fa-solid fa-street-view"></i>
+            </button>
+          </div>
+          <div class="col" style="padding-left: 0px">
             <div class="row">
-              <form>
-                <div class="input-group mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Another Location"
-                    aria-label="Recipient's username"
-                    aria-describedby="button-addon2"
-                    id="input"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    id="button-addon2"
-                  >
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </div>
-              </form>
+              <div class="col-12">
+                <form>
+                  <div class="input-group mb-3">
+                    <input
+                      type="search"
+                      class="form-control"
+                      placeholder="Another Location"
+                      aria-label="Recipient's username"
+                      aria-describedby="button-addon2"
+                      id="input"
+                    />
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      id="button-addon2"
+                    >
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
             <div class="col HW">
               <div class="hw">
