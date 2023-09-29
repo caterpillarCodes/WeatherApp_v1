@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>weather</title>
-    <link rel="stylesheet" href="styles.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,39 +22,40 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&family=Lisu+Bosa:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruwudu:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="card">
-      <div class="card-body">
-        <div class="container" style="max-width: 680px">
-          <div class="row">
-            <div class="col current-situation-box">
-              <div class="row row-icon-city-date">
-                <div class="col-2 width=30%">
-                  <i class="fa-solid fa-location-dot location-icon"></i>
-                </div>
-                <div class="col city-date">
-                  <p class="current-city">Berlin</p>
-                  <p class="current-date">Wednesday 16:08 | AUG 18</p>
-                </div>
+    <div class="container" style="max-width: 680px">
+      <div class="weatherwrapper">
+        <div class="row weather">
+          <div class="col current-situation-box">
+            <div class="row row-icon-city-date">
+              <div class="col-4 width=40%">
+                <i class="fa-solid fa-location-dot location-icon"></i>
               </div>
-              <p class="current-tempature">
-                <span id="temperature">17</span>°<span id="temperature-unit"
-                  >C</span
-                >
-                <sub style="font-size: 25px"> | <a id="unit-sub">°F</a></sub>
-              </p>
-              <image
-                src=""
-                id="icon"
-                alt=""
-                class="current-situation-icon"
-              ></image>
-              <p class="current-situation-text">Mostly cloudy</p>
+              <div class="col city-date">
+                <p class="current-city">Berlin</p>
+                <p class="current-date">Wednesday 16:08 | AUG 18</p>
+              </div>
             </div>
-            <div class="col-2" style="width: 22%"></div>
-            <div class="col">
+            <p class="current-tempature">
+              <span id="temperature">17</span>°<span id="temperature-unit"
+                >C</span
+              >
+              <sub style="font-size: 25px"> | <a id="unit-sub">°F</a></sub>
+            </p>
+            <image
+              src=""
+              id="icon"
+              alt=""
+              class="current-situation-icon"
+            ></image>
+            <p class="current-situation-text">Mostly cloudy</p>
+          </div>
+          <div class="col-2" style="width: 10%"></div>
+          <div class="col">
+            <div class="row">
               <form>
                 <div class="input-group mb-3">
                   <input
@@ -75,37 +76,11 @@
                 </div>
               </form>
             </div>
-          </div>
-          <div class="row next-days">
-            <div class="col next-day-forecast">
-              <h5>THU</h5>
-              <i class="fa-solid fa-cloud-showers-heavy next-day-icon"></i>
-              <p class="next-day-situation">Showers</p>
-              <p class="next-day-temprature">18°C</p>
-            </div>
-            <div class="col next-day-forecast">
-              <h5>FRI</h5>
-              <i class="fa-solid fa-cloud-sun next-day-icon"></i>
-              <p class="next-day-situation">Mostly cloudy</p>
-              <p class="next-day-temprature">10°C</p>
-            </div>
-            <div class="col next-day-forecast">
-              <h5>SAT</h5>
-              <i class="fa-solid fa-cloud next-day-icon"></i>
-              <p class="next-day-situation">Cloudy</p>
-              <p class="next-day-temprature">4°C</p>
-            </div>
-            <div class="col next-day-forecast">
-              <h5>SUN</h5>
-              <i class="fa-regular fa-snowflake next-day-icon"></i>
-              <p class="next-day-situation">snowy</p>
-              <p class="next-day-temprature">-2°C</p>
-            </div>
-            <div class="col next-day-forecast">
-              <h5>MON</h5>
-              <i class="fa-regular fa-snowflake next-day-icon"></i>
-              <p class="next-day-situation">snowy</p>
-              <p class="next-day-temprature">-1°C</p>
+            <div class="col HW">
+              <div class="hw">
+                <p>Humidity: <span id="humidity"></span>%</p>
+                <p>Wind: <span id="wind"></span> km/h</p>
+              </div>
             </div>
           </div>
         </div>

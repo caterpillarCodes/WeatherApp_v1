@@ -40,13 +40,16 @@ function formatedDate(timestamp) {
 //change city & show temprature
 
 function displayWeatherCondition(response) {
-  console.log(response.data.weather[0].icon);
+  celsiusTemprature = response.data.main.temp;
   document.querySelector(".current-city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemprature);
   document.querySelector("p.current-situation-text").innerHTML =
     response.data.weather[0].description;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   document.querySelector(".current-date").innerHTML = formatedDate(
     response.data.dt * 1000
   );
@@ -76,6 +79,7 @@ function changeCity(event) {
     alert("Enter a city name...");
   }
 }
+let celsiusTemprature = null;
 let form = document.querySelector("form");
 form.addEventListener("submit", changeCity);
 let searchButton = document.querySelector("#button-addon2");
@@ -91,11 +95,11 @@ changeUnit.addEventListener("click", function (event) {
   event.preventDefault();
   let flag = event.target.innerText;
   if (flag === "°F") {
-    temperatureElement.innerHTML = 62;
+    temperatureElement.innerHTML = Math.round((celsiusTemprature * 9) / 5 + 32);
     currentUnit.innerHTML = "F";
     changeUnit.innerHTML = "°C";
   } else {
-    temperatureElement.innerHTML = 17;
+    temperatureElement.innerHTML = Math.round(celsiusTemprature);
     currentUnit.innerHTML = "C";
     changeUnit.innerHTML = "°F";
   }

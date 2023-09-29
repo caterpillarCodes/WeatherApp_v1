@@ -2,14 +2,18 @@
   font-family: "Lisu Bosa", serif;
   color: #323a49;
 }
-.card {
+
+.weatherwrapper {
   max-width: 680px;
-  margin: 4rem auto 0 auto;
+  margin: 2rem auto 0 auto;
+  padding: 1em;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/510/original/Untitled-1.png?1696016663");
+  border: 3px solid #ebeef1;
+  border-radius: 10px;
+  box-shadow: -10px -5px 10px -1px rgba(255, 255, 255, 0.7),
+    10px 5px 10px -1px rgba(10, 99, 169, 0.16);
 }
-.card-body {
-  background-color: #ebeef1;
-}
-.row {
+.weather {
   margin: 14px 10px 16px 10px;
 }
 
@@ -17,33 +21,34 @@
      current situation
 ========================*/
 .current-situation-box {
-  margin: 16px 0 0 6px;
-  background-color: #ebeef1;
-  border: 3px solid #ebeef1;
-  border-radius: 10px;
-  box-shadow: inset -5px -10px 10px -1px rgba(255, 255, 255, 0.7),
-    inset 5px 5px 10px -1px rgba(10, 99, 169, 0.16);
+  margin: 50px 0 0 20px;
+  background-color: #ffe8da;
+  border: 3px solid #ffe8da;
+  border-radius: 50% 10% 40% 10%;
+  box-shadow: -8px -5px 10px -1px rgb(251, 239, 230),
+    10px 5px 10px -1px rgb(255, 224, 206);
   transition: all 300ms ease-in-out;
   color: #323a49;
 }
 
 .current-situation-box:hover {
-  border: 3px solid #ebeef1;
-  box-shadow: -10px -10px 10px -1px rgba(255, 255, 255, 0.7),
-    10px 10px 10px -1px rgba(10, 99, 169, 0.16),
-    inset -5px -5px 10px -1px rgba(255, 255, 255, 0.7),
-    inset 5px 5px 10px -1px rgba(10, 99, 169, 0.16);
+  border: 3px solid #ffe8da;
+  box-shadow: -10px -10px 10px -1px rgba(253, 231, 217, 0.7),
+    10px 10px 10px -1px rgba(245, 217, 200, 0.16),
+    inset -5px -5px 10px -1px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 10px -1px rgba(161, 90, 46, 0.16);
 }
 .row-icon-city-date {
   margin-bottom: 0;
 }
 .location-icon {
-  margin: 20px 0 0 10px;
+  margin: 30px 0 0 55px;
   font-size: 34px;
   color: #1e3050;
 }
 div .city-date {
-  padding-top: 18px;
+  padding-top: 30px;
+  margin-left: 8px;
 }
 div .current-city {
   margin-bottom: 0;
@@ -72,32 +77,53 @@ span#temperature {
   font-size: 20px;
   cursor: pointer;
 }
-.current-situation-icon {
-  margin: 0 0 24px 10px;
-  font-size: 44px;
-  color: #1e3050;
+image .current-situation-icon {
+  margin: 0 4px;
+  border: #1e3050;
 }
+
 div .current-situation-text {
-  margin: 0 0 24px 8px;
+  margin: 0 0 24px 0px;
   display: inline;
   font-size: 16px;
   color: #696a6c;
   text-transform: capitalize;
 }
-
+div .hw {
+  max-width: 70%;
+  border-radius: 20% 50% 20px 50%;
+  box-shadow: -8px -5px 10px -1px rgb(253, 231, 217),
+    10px 5px 10px -1px rgb(245, 217, 200);
+  margin: 50px 5px;
+  padding: 1em 1.5em;
+  transition: all 250ms ease-in-out;
+}
+div .hw:hover {
+  background-color: #ffe8da;
+  box-shadow: -10px -10px 10px -1px rgba(253, 231, 217, 0.7),
+    10px 10px 10px -1px rgba(245, 217, 200, 0.16),
+    inset -5px -5px 10px -1px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 10px -1px rgba(161, 90, 46, 0.16);
+}
 /*=======================
       search section
 =======================*/
 input .input-group {
   background-color: #ebeef1;
 }
-.btn:hover {
+button {
+  border: 1px solid #ebeef1;
+  border-radius: 0 50% 0 50%;
+  box-shadow: -10px -5px 10px -1px rgba(255, 255, 255, 0.7),
+    10px 5px 10px -1px rgba(10, 99, 169, 0.16);
+}
+button:hover {
   color: #1e3050;
 }
 /*=======================
      next days situation
 ==========================*/
-.next-day-forecast {
+/*.next-day-forecast {
   text-align: center;
   border: 2px solid #ebeef1;
   border-radius: 10px;
@@ -135,6 +161,7 @@ div .next-days i.next-day-icon {
   font-size: 22px;
   color: #1e3050;
 }
+*/
 /*==================
    add repo link
    ==================*/
@@ -144,6 +171,7 @@ p.author {
   max-width: 680px;
   font-size: 12px;
   color: #696a6c;
+  padding: 1em 2em;
 }
 .repolink {
   text-decoration: none;
