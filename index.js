@@ -1,4 +1,23 @@
 //date and time
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = ``;
+  let weekdays = ["THU", "Fri", "SAT", "SUN", "MON"];
+  weekdays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2 next-day-forecast" width:20%;>
+            <h5>${day}</h5>
+            <i class="fa-solid fa-cloud-showers-heavy next-day-icon"></i>
+            <p class="next-day-situation">Showers</p>
+            <span class="next-day-temprature-max">18°</span>
+            <span class="next-day-temprature-min">17°</span>
+        </div>`;
+
+    forecastElement.innerHTML = forecastHTML;
+  });
+}
+
 function formatedDate(timestamp) {
   let days = [
     "Sunday",
@@ -118,3 +137,4 @@ changeUnit.addEventListener("click", function (event) {
     changeUnit.innerHTML = "°F";
   }
 });
+displayForecast();
