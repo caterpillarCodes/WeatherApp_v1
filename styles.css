@@ -8,10 +8,10 @@
   margin: 2rem auto 0 auto;
   padding: 15px;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/510/original/Untitled-1.png?1696016663");
-  border: 3px solid #ebeef1;
+  border: 3px solid #ffe8da;
   border-radius: 10px;
-  box-shadow: -10px -5px 10px -1px rgba(251, 239, 230, 0.7),
-    10px 5px 10px -1px rgba(255, 224, 206, 0.16);
+  box-shadow: -10px -5px 10px -1px rgba(248, 238, 230, 0.7),
+    10px 5px 10px -1px rgba(255, 219, 198, 0.313);
 }
 .weather {
   margin: 14px 5px 16px 5px;
@@ -44,7 +44,7 @@
 .location-icon {
   margin: 30px 0 0 55px;
   font-size: 34px;
-  color: #1e3050;
+  color: #18181bdc;
 }
 div .city-date {
   padding-top: 30px;
@@ -60,26 +60,20 @@ div .current-city {
   font-weight: 900;
   font-size: 12px;
   color: #696a6c;
+  margin-bottom: 15px;
 }
 .current-tempature,
 span#temperature {
-  margin: 10px 0 0px 10px;
-  font-size: 60px;
+  margin: 0;
+  margin-top: 10px;
+  font-size: 65px;
   font-family: "Ruwudu", serif;
-  color: #1e3050;
+  color: rgb(16, 19, 25);
+  text-align: center;
 }
 
-#unit-sub {
-  font-size: 25px;
-  transition: all 250ms ease-in-out;
-}
-#unit-sub:hover {
-  font-size: 20px;
-  cursor: pointer;
-}
 image .current-situation-icon {
-  margin: 0 4px;
-  border: #1e3050;
+  margin: 0;
 }
 
 div .current-situation-text {
@@ -151,7 +145,7 @@ div .hw:hover {
 }
 div h5 {
   margin: 18px auto 0 auto;
-  color: #1e3050;
+  color: #161618;
   opacity: 0.6;
 }
 

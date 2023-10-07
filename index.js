@@ -140,23 +140,3 @@ form.addEventListener("submit", changeCity);
 searchButton.addEventListener("click", changeCity);
 currentLocationBtn.addEventListener("click", getCurrentLocation);
 search("berlin");
-
-// °C to °F
-
-let temperatureElement = document.querySelector("#temperature");
-let currentUnit = document.querySelector("#temperature-unit");
-let changeUnit = document.querySelector("#unit-sub");
-changeUnit.addEventListener("click", function (event) {
-  event.preventDefault();
-  let flag = event.target.innerText;
-  if (flag === "°F") {
-    temperatureElement.innerHTML = Math.round((celsiusTemprature * 9) / 5 + 32);
-    currentUnit.innerHTML = "F";
-    changeUnit.innerHTML = "°C";
-  } else {
-    temperatureElement.innerHTML = Math.round(celsiusTemprature);
-    currentUnit.innerHTML = "C";
-    changeUnit.innerHTML = "°F";
-  }
-});
-displayForecast();
