@@ -19,10 +19,10 @@ function displayForecast(response) {
               day.weather[0].icon
             }@2x.png' >
             <p class="next-day-situation">${day.weather[0].description}</p>
-            <span class="next-day-temprature-max">${Math.round(
+            <span class="next-day-temperature-max">${Math.round(
               day.temp.max
             )}°</span>
-            <span class="next-day-temprature-min">${Math.round(
+            <span class="next-day-temperature-min">${Math.round(
               day.temp.min
             )}°</span>
         </div>`;
@@ -77,13 +77,13 @@ function formatedDate(timestamp) {
   } ${date.getDate()}`;
 }
 
-//change city & show temprature
+//change city & show temperature
 
 function displayWeatherCondition(response) {
-  celsiusTemprature = response.data.main.temp;
+  celsiusTemperature = response.data.main.temp;
   document.querySelector(".current-city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML =
-    Math.round(celsiusTemprature);
+    Math.round(celsiusTemperature);
   document.querySelector("p.current-situation-text").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -129,7 +129,7 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
-let celsiusTemprature = null;
+let celsiusTemperature = null;
 let apiKey = `743bee57fddbfaf52447193a87d5dd25`;
 let endPoint = `https://api.openweathermap.org/data/2.5/weather?`;
 let units = "metric";
